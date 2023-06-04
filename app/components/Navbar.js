@@ -2,12 +2,16 @@ import Link from 'next/link';
  
 export default function Navbar() {
   return (
-    <header class="">
-        <div class="">
-            <nav class="hidden flex-col gap-3 sm:!flex sm:flex-row">
-                <span><a class="shine" href="/">Hakkımda</a></span>
-                {/* <span><a class="" href="/photos">Fotoğraflar</a></span>
-                <span><a class="" href="/post">Yazılar</a></span> */}
+    <header>
+        <div>
+            <nav className="hidden flex-col gap-3 sm:!flex sm:flex-row">
+                <span>
+                    <Link className="shine" href="/">Hakkımda</Link>
+                  </span>
+                {/* <span><a className="" href="/photos">Fotoğraflar</a></span> */}
+                <span>
+                  <Link className="shine" href="/post">Yazılar</Link>
+                </span>
                 </nav>
             </div>
         </header>
