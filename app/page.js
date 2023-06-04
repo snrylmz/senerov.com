@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 export default async function Home() {
   return (
     
-    <main className="flex min-h-screen flex-col flex-direction px-24 pt-10 dark:bg-gray-950">
+    <main className="flex min-h-screen flex-col flex-direction px-4 md:px-6 lg:px-12 pt-10 bg-slate-900">
       
       <div className="mb-10">
         <Navbar />

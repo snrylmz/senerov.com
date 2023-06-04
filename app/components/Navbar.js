@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <header>
         <div>
-            <nav className="hidden flex-col gap-3 sm:!flex sm:flex-row">
+            <nav className="gap-3 flex flex-row">
                 <span>
                     <Link className="shine" href="/">Hakkımda</Link>
                   </span>

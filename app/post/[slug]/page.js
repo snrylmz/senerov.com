@@ -7,10 +7,10 @@ async function getContent(slug) {
 }
 
 export default async function Page({ params: { slug } }) {
-  const page = await getContent(slug);
+  const post = await getContent(slug);
 
   return (
-    <main className="flex min-h-screen flex-col flex-direction px-24 pt-10 dark:bg-gray-950">
+    <main className="flex min-h-screen flex-col flex-direction px-4 md:px-6 lg:px-12 pt-10 bg-slate-900">
     <div className="max-w-screen-sm mx-auto px-6">
     <div className="mb-20">
           <Navbar />
@@ -18,11 +18,12 @@ export default async function Page({ params: { slug } }) {
       <div className="">
         <article className="post mt-10 mb-20">
           <header>
-            <h1 className="shine text-2xl font-semibold">{page.data.title}</h1>
-            <h2 className="text-gray-400 text-md mt-2 text-xl mb-5 font-normal">{page.data.summary}</h2>
-            <Date dateString={page.data.updated} className="text-lg" />
+            <h1 className="shine text-2xl font-semibold">{post.data.title}</h1>
+            <h2 className="text-gray-400 text-md mt-2 text-xl mb-5 font-normal">{post.data.summary}</h2>
+            <span className="mr-5 text-sm text-gray-400">Yayın Tarihi: <Date dateString={post.data.published} /></span>
+            <span className="text-sm text-gray-400">Son Güncelleme: <Date dateString={post.data.updated}/></span>
           </header>
-          <div className="post-body mt-10 leading-relaxed text-zinc-800 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: page.data.body }}></div>
+          <div className="post-body mt-10 leading-relaxed text-zinc-800 dark:text-gray-300" dangerouslySetInnerHTML={{ __html: post.data.body }}></div>
         </article>
       </div>
     </div>      
