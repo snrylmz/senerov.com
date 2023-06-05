@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   weight: ['400', '700'],
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="tr">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>{children}</body>
+      <Analytics />
     </html>
   )
 }
