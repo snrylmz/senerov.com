@@ -24,10 +24,10 @@ export default async function Home({ }) {
   const data = await getData();
   return (
 
-    <main className="flex min-h-screen justify-center px-4 md:px-6 lg:px-12 py-20 bg-slate-950">
-      <div className="w-4/5 bg-slate-900 border-4 border-slate-800 rounded-lg">
-        <div className="flex h-full overflow-y-scroll">
-          <div className="w-3/12 bg-slate-950 p-3 border-e-2 border-slate-900">
+    <main className="flex min-h-screen justify-center px-4 md:px-6 lg:px-12 py-5 md:py-20 bg-slate-950">
+    <div className="md:w-4/5 bg-slate-900 border-4 border-slate-800 rounded-lg">
+      <div className="flex flex-col md:flex-row h-full">
+          <div className="md:w-3/12 bg-slate-950 p-3 border-e-2 border-slate-900">
             <div className="flex">
               <div className="w-3 h-3 bg-red-500 mx-1 rounded-full"></div>
               <div className="w-3 h-3 bg-yellow-500 mx-1 rounded-full"></div>
@@ -35,9 +35,9 @@ export default async function Home({ }) {
             </div>
             <Navbar />
           </div>
-          <div className="w-9/12 bg-slate-900 overflow-y-scroll pb-10" style={height}>
+          <div className="md:w-9/12 bg-slate-900">
             <div className="bg-slate-950">
-              <div className="w-fit pt-1 ms-10">
+              <div className="w-fit pt-1 ms-3 md:ms-10">
                 <div className="mt-1 bg-slate-900 pt-2 px-4 rounded-t-md">
                   <span className="text-md">Blog yazıları ve kısa notlar</span>
                   <span className="text-md ms-10 text-slate-500">
@@ -46,7 +46,7 @@ export default async function Home({ }) {
                 </div>
               </div>
             </div>
-            <div className="mt-10 ms-10">
+            <div className="mt-10 ms-3 md:ms-10">
               {data.data.map((post) =>
                 <article className="mt-10 border-b border-slate-800 pb-5" key={post.id}>
                   <header>
