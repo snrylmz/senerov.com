@@ -1,13 +1,23 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
-const inter = Inter({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  display: 'swap',
- })
-
+import localFont from 'next/font/local'
+ 
+// Font files can be colocated inside of `pages`
+const myFont = localFont({
+  src: [
+    {
+      path: '../fonts/iAWriterQuattroS-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/iAWriterQuattroS-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
 
  export const metadata = {
   title: 'Şener Yılmaz',
@@ -18,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={inter.className}>{children} <Analytics /></body>
+      <body className={myFont.className}>{children} <Analytics /></body>
     </html>
   )
 }
