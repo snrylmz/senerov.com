@@ -35,7 +35,7 @@ export default async function Home({ }) {
             </div>
             <Navbar />
           </div>
-          <div className="md:w-9/12 bg-slate-900">
+          <div className="md:w-9/12 bg-slate-900 overflow-y-scroll pb-10" style={height}>
             <div className="bg-slate-950">
               <div className="w-fit pt-1 ms-3 md:ms-10">
                 <div className="mt-1 bg-slate-900 pt-2 px-4 rounded-t-md">
