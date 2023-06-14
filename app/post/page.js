@@ -3,7 +3,9 @@ import Date from '../components/date';
 import Link from 'next/link';
 
 async function getData() {
-  const res = await fetch(`https://api.buttercms.com/v2/posts/?auth_token=7421d8dbab2a4a86ed788e384f8d4024e487ad06`);
+  const res = await fetch(`https://api.buttercms.com/v2/posts/?auth_token=7421d8dbab2a4a86ed788e384f8d4024e487ad06`, {
+    cache: 'no-store',
+  });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
